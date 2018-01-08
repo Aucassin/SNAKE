@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace SNAKE
 {
-    public class FoodManager
+    class FoodManager
     {
         Random rand = new Random();
-        Cell food = new Cell();
-        public void foodspawn(int fx, int fy)
+        public void foodspawn()
         {
-            Console.SetCursorPosition(fx, fy);
+            Cell food = new Cell
+            {
+                x = rand.Next(2, Console.WindowWidth),
+                y = rand.Next(2, Console.WindowHeight)
+            };
+            Console.SetCursorPosition(food.x, food.y);
             Console.Write("0");
-            food.x = fx;
-            food.y = fy;
         }
+        
     }
 }

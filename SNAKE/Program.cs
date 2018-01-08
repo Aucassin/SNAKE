@@ -11,10 +11,8 @@ namespace SNAKE
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Random rand = new Random();
             FoodManager food = new FoodManager();
-            food.foodspawn(rand.Next(0, Console.WindowWidth), rand.Next(0, Console.WindowHeight));
-
+            food.foodspawn();
             Move start = new Move(100);
             start.Create();
             start.Moving();

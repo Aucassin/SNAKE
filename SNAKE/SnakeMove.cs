@@ -52,6 +52,14 @@ namespace SNAKE
                             break;
                     }
                 }
+                if (snake[0].y < 0 || snake[0].x < 0 || snake[0].y > Console.WindowHeight || snake[0].x >= Console.WindowWidth)
+                {
+                    Console.Clear();
+                    Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
+                    Console.WriteLine("GAME OVER");
+                    break;
+                }
+
             }
         }
     }
